@@ -142,3 +142,25 @@ a:hover {
     font-size: clamp(1.2rem, 4vw, 1.8rem);
   }
 }
+
+.album-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.album-title {
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  letter-spacing: 0.2em;
+}
+
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.track-list a {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: 0.18em;
+}
