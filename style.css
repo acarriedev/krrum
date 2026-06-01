@@ -10,9 +10,10 @@ body {
 }
 
 body {
-  background-image: url("assets/background.jpg");
+  /* CHANGE THIS PATH IF YOUR FILENAME IS DIFFERENT */
+  background-image: url("./assets/background.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 
@@ -30,7 +31,7 @@ body {
   justify-content: center;
   align-items: flex-start;
 
-  padding-top: 12vh;
+  padding-top: 18vh;
   padding-bottom: 6vh;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -38,31 +39,32 @@ body {
 
 .container {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
 
   text-align: center;
 
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 h1 {
-  font-size: clamp(3.5rem, 10vw, 7rem);
+  font-size: clamp(5rem, 14vw, 9rem);
   font-weight: 400;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.32em;
+  line-height: 0.95;
 }
 
 h2 {
-  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-size: clamp(1.8rem, 5vw, 3rem);
   font-weight: 400;
-  letter-spacing: 0.2em;
-  margin-bottom: 0.75rem;
+  letter-spacing: 0.22em;
+  margin-bottom: 0.5rem;
 }
 
 .release p {
-  font-size: clamp(1rem, 2.4vw, 1.4rem);
-  letter-spacing: 0.18em;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  letter-spacing: 0.2em;
 }
 
 .inline-links {
@@ -78,7 +80,7 @@ h2 {
 
 .inline-links a,
 .inline-links span {
-  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
   letter-spacing: 0.12em;
 }
 
@@ -92,24 +94,44 @@ a:hover {
   opacity: 0.6;
 }
 
+.release {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
 
-    padding-top: 10vh;
+    padding-top: 14vh;
     padding-left: 1rem;
     padding-right: 1rem;
   }
 
   h1 {
-    letter-spacing: 0.15em;
+    font-size: clamp(4rem, 18vw, 6rem);
+    letter-spacing: 0.18em;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 7vw, 2.4rem);
+  }
+
+  .release p {
+    font-size: clamp(1rem, 4vw, 1.5rem);
   }
 
   .container {
-    gap: 1.75rem;
+    gap: 1.25rem;
   }
 
   .inline-links {
     gap: 0.35rem;
+    line-height: 1.6;
   }
 }
