@@ -17,6 +17,7 @@ body {
   background-attachment: fixed;
 
   color: #000;
+
   font-family:
     "Trajan Pro",
     "Trajanus Roman",
@@ -27,46 +28,58 @@ body {
 
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
-  padding: 3rem 1.5rem;
+  padding-top: 12vh;
+  padding-bottom: 6vh;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .container {
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
 
   text-align: center;
 
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 h1 {
-  font-size: clamp(3rem, 10vw, 7rem);
+  font-size: clamp(3.5rem, 10vw, 7rem);
   font-weight: 400;
   letter-spacing: 0.25em;
 }
 
 h2 {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 400;
   letter-spacing: 0.2em;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
-p,
-a,
-span {
-  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
-  letter-spacing: 0.15em;
+.release p {
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  letter-spacing: 0.18em;
 }
 
-.links {
+.inline-links {
   display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+
+  line-height: 1.8;
+}
+
+.inline-links a,
+.inline-links span {
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  letter-spacing: 0.12em;
 }
 
 a {
@@ -82,14 +95,21 @@ a:hover {
 @media (max-width: 768px) {
   body {
     background-attachment: scroll;
-    padding: 2rem 1rem;
-  }
 
-  .container {
-    gap: 2.5rem;
+    padding-top: 10vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   h1 {
     letter-spacing: 0.15em;
+  }
+
+  .container {
+    gap: 1.75rem;
+  }
+
+  .inline-links {
+    gap: 0.35rem;
   }
 }
