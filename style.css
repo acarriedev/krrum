@@ -150,8 +150,9 @@ a:hover {
 }
 
 .album-title {
-  font-size: clamp(1.6rem, 3vw, 2.5rem);
-  letter-spacing: 0.2em;
+  font-size: clamp(1rem, 1.6vw, 1.5rem);
+  letter-spacing: 0.25em;
+  margin-bottom: 1rem;
 }
 
 .track-list {
