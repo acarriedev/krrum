@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-image: url("assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: #000;
+  font-family:
+    "Trajan Pro",
+    "Trajanus Roman",
+    "Times New Roman",
+    serif;
+
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 3rem 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+h1 {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 400;
+  letter-spacing: 0.25em;
+}
+
+h2 {
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+p,
+a,
+span {
+  font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+  letter-spacing: 0.15em;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.25s ease;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    gap: 2.5rem;
+  }
+
+  h1 {
+    letter-spacing: 0.15em;
+  }
+}
